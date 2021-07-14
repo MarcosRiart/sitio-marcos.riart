@@ -1,0 +1,302 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,400&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: $fontF;
+    font-weight: $fontW;
+	background-color: #ffffff;
+}
+.bodyHome{
+	display: grid;
+	grid-template-areas: $gridAreas;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr;
+}
+
+/*------------------Header------------------- */
+#header{
+    grid-area: header;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+    border-bottom: 5px solid $darkBlue;
+    .nav-link{
+        font-size: ($fontSize50/2)-6;
+    }
+    .navbar-nav{
+        margin-left: 10%;
+    }
+    .header__titulo{
+        text-decoration: none;
+        font-size: ($fontSize50/2)+3;
+        color: $fontColor;
+    }
+    .header__letra{
+        color: #71231f;
+        font-weight: bold;
+    }
+}
+.dropdown-menu{
+    background-color: $darkBlue;
+    border-color: $darkBlue;
+}
+.dropdown-item{
+    color: $fontColor;
+}
+.bg-color{
+    background-color: $darkBlue;
+}
+
+/*------------------Banner------------------- */
+#banner{
+	grid-area: banner;
+	position: relative;
+	margin-top: 80px;
+}
+.carousel-item__img{
+	object-fit: cover;
+}
+/*------------------Envios y Pagos------------------- */
+#sectionInfo{
+	grid-area: sectionInfo;
+}
+.card-info{
+        border: none;
+        background-color: rgba(40, 40, 40, 0.03);
+    .card-info__body{
+        color: #343a40;
+    }
+    .imgSvg{
+        width: 20%;
+        object-fit: cover;
+    }
+}
+
+/*------------------Novedades------------------- */
+#nuevo{
+	grid-area: nuevo;
+    .nuevo__titulo{
+        color: #343a40;
+        text-align: center;
+        margin-top: 30px;
+        font-size: ($fontSize50/2)+2;
+    }
+
+    .nuevo__subtitulo{
+        color: #717070;
+        text-align: center;
+        margin-top: 10px;
+        font-size: ($fontSize50/5)+6;
+    }
+}
+.clear{
+	clear: both;
+}
+
+/*------------------Footer------------------- */
+
+#seccion-contacts{
+    @include section-contact;
+    .contacts, .contacts__iframe{
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+   }
+}
+.footer{
+    @include flexFooter;
+}
+.bgFooter{
+    background-color: $darkBlue;
+}
+.footer__informacion{
+    .footer__informacion--contactos{
+        color: $fontColor;
+        font-size: ($fontSize50/2)-3;
+    }
+    .footer__informacion--list{
+        color: $fontColor;
+        list-style-type: none;
+    }
+    span{
+        font-family: $fontF;
+        font-weight: $fontW;
+        font-size: 14px;
+    }
+}
+.footer__box--redes{
+    .fa-whatsapp{
+        color: $fontColor;
+    }
+    .fa-facebook-f{
+        @extend .fa-whatsapp;
+    }
+    a{
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+.footer__box--diseñador{
+    color: $fontColor;
+}
+.footer__horarios{
+    .footer__horarios--title{
+        color: $fontColor;
+        font-size: ($fontSize50/2)-3;
+    }
+    .footer__horarios--list{
+        list-style-type: none;
+        color: $fontColor;
+        font-size: ($fontSize50/4)+2;
+    }
+}
+/*------------------Seccion Productos------------------- */
+.bodyProductos{
+    display: $flex;
+    flex-direction: $flexColumn;
+}
+/*---------Carousel------ */
+#carousel-marcas{
+    .carousel__texto{
+        font-size: ($fontSize50/2)-3;
+    }
+    .carousel__titulo{
+        color: #5e7f8a;
+        text-align: center;
+        font-size: ($fontSize50/2)+2;
+        margin-top: 70px;
+    }
+    .carousel__imagen{
+        object-fit: cover;
+    }
+}
+
+/*---------Productos------ */
+#section-products{
+    grid-area: newProducts;
+    .section-products__imagenes{
+        object-fit: cover;
+    }
+    .card__sombra{
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    }
+    h3{
+        text-align: center;
+        font-size: $fontSize50 - 10;
+        color: #5e7f8a;
+        text-transform: uppercase;
+    } 
+    .btn-primary{
+        color: $fontColor;
+        background-color: $darkBlue;
+        border-color: $darkBlue;
+    }
+}
+
+/*------------------Seccion ABOUT US------------------- */
+.bodyAbout{
+    display: $flex;
+    flex-direction: $flexColumn
+}
+#section-info-about{
+    .card__about{
+        @include card-about;
+    }
+    .card__about--body{
+        display: $flex;
+        flex-direction: $flexColumn;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1{
+        @include h1-about;
+    }
+    .section-info-about__imagen{
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+    .section-info-about__texto{
+        color: #3d3636;
+        text-align: center;
+        font-size: $fontSize50/2;
+    }
+}
+
+/*------------------Mobile first------------------- */
+@media all and (max-width: 1024px){
+	.bodyHome{
+	grid-template-areas: $gridAreas;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	} 
+    #banner{
+        margin-top: 107px;
+    }
+	#banner .carousel-item{
+		height: auto;
+	}
+    #carousel-marcas{
+        .carousel__titulo{
+            margin-top: 105px;
+        }
+    }
+	#section-info-about{
+        h1{
+            margin-top: 110px;
+        }
+		.card__about{
+            display: $flex;
+            flex-direction: $flexColumn;
+        }
+        .section-info-about__imagen{
+            width: auto;
+        }
+	}
+} 
+@media all and (max-width: 768px){
+	.bodyHome{
+	grid-template-areas: $gridAreas;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr;
+	} 
+    #banner{
+        max-width: none;
+        margin-top: 64px;
+        .carousel-item{
+            height: auto;
+        }
+    }
+    #carousel-marcas{
+        .carousel__titulo{
+            margin-top: 70px;
+        }
+    }
+    #section-info-about{
+        h1{
+            margin-top: 70px;
+        }
+        .card__about{
+            
+        }
+        .section-info-about__imagen{
+            
+            width: auto;
+        }
+    }
+} 
+@media all and (max-width: 576px){
+    .bodyHome{
+        grid-template-areas: $gridAreas;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        } 
+        #sectionInfo{
+            width: 70%;
+        }
+}
