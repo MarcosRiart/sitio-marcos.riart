@@ -1,5 +1,5 @@
 @import "variables";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 
 *{
 	margin: 0;
@@ -25,6 +25,7 @@ body{
     position: fixed;
     z-index: 100;
     border-bottom: 5px solid $darkBlue;
+    opacity: 92%;
     .nav-link{
         font-size: ($fontSize50/2)-6;
     }
@@ -41,6 +42,14 @@ body{
         font-weight: bold;
     }
 }
+#nav-bar{
+    .nav-link{
+        color: $fontColor;
+    }
+}
+#nav-bar ul li a:hover{
+    @include nav-bar-animation;
+}
 .dropdown-menu{
     background-color: $darkBlue;
     border-color: $darkBlue;
@@ -48,8 +57,15 @@ body{
 .dropdown-item{
     color: $fontColor;
 }
+.dropdown-item:hover{
+    @include nav-bar-animation
+}
 .bg-color{
     background-color: $darkBlue;
+}
+.nav-item.dropdown:hover .dropdown-menu{
+    display: block;
+    margin-top: auto;
 }
 
 /*------------------Banner------------------- */
@@ -64,12 +80,17 @@ body{
 /*------------------Envios y Pagos------------------- */
 #sectionInfo{
 	grid-area: sectionInfo;
+    
 }
 .card-info{
         border: none;
-        background-color: rgba(40, 40, 40, 0.03);
+        background-color: rgba(90, 90, 90, 0.05);
     .card-info__body{
         color: #343a40;
+        .card-title{
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
     }
     .imgSvg{
         width: 20%;
@@ -85,6 +106,7 @@ body{
         text-align: center;
         margin-top: 30px;
         font-size: ($fontSize50/2)+2;
+        font-weight: $fontW;
     }
 
     .nuevo__subtitulo{
@@ -92,6 +114,7 @@ body{
         text-align: center;
         margin-top: 10px;
         font-size: ($fontSize50/5)+6;
+        font-weight: $fontW;
     }
 }
 .clear{
@@ -118,6 +141,7 @@ body{
     .footer__informacion--contactos{
         color: $fontColor;
         font-size: ($fontSize50/2)-3;
+        font-weight: $fontW;
     }
     .footer__informacion--list{
         color: $fontColor;
@@ -130,15 +154,13 @@ body{
     }
 }
 .footer__box--redes{
-    .fa-whatsapp{
-        color: $fontColor;
-    }
-    .fa-facebook-f{
-        @extend .fa-whatsapp;
-    }
     a{
+        color: $fontColor;
         text-decoration: none;
         background-color: transparent;
+    }
+    a:hover{
+        color: #5a7c9e;
     }
 }
 .footer__box--diseñador{
@@ -170,6 +192,7 @@ body{
         text-align: center;
         font-size: ($fontSize50/2)+2;
         margin-top: 70px;
+        font-weight: 500;
     }
     .carousel__imagen{
         object-fit: cover;
@@ -183,17 +206,26 @@ body{
         object-fit: cover;
     }
     .card__sombra{
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+        box-shadow: .7rem .7rem 1rem rgba(0,70,130,.20);
+    }
+    .card-title{
+        font-weight: $fontW;
     }
     h3{
         text-align: center;
         font-size: $fontSize50 - 10;
+        font-weight: $fontW;
         color: #5e7f8a;
         text-transform: uppercase;
     } 
-    .btn-primary{
+    .btn-product{
         color: $fontColor;
         background-color: $darkBlue;
+        border-color: $darkBlue;
+    }
+    .btn-product:hover{
+        color: $darkBlue;
+        background-color: $fontColor;
         border-color: $darkBlue;
     }
 }
@@ -201,7 +233,7 @@ body{
 /*------------------Seccion ABOUT US------------------- */
 .bodyAbout{
     display: $flex;
-    flex-direction: $flexColumn
+    flex-direction: $flexColumn;
 }
 #section-info-about{
     .card__about{
@@ -225,6 +257,11 @@ body{
         color: #3d3636;
         text-align: center;
         font-size: $fontSize50/2;
+        font-weight: $fontW;
+    }
+    .section-info-about__title{
+        font-size: 2.5rem;
+        font-weight: $fontW;
     }
 }
 
