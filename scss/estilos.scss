@@ -50,6 +50,7 @@ body{
 #nav-bar ul li a:hover{
     @include nav-bar-animation;
 }
+
 .dropdown-menu{
     background-color: $darkBlue;
     border-color: $darkBlue;
@@ -67,6 +68,26 @@ body{
     display: block;
     margin-top: auto;
 }
+.modal-body{
+    .form-consulta{
+        resize: none;
+    }
+}
+.modal-footer{
+    .btn-form{
+        color: $fontColor;
+        background-color: $darkBlue;
+        border-color: $darkBlue;
+    }
+    .btn-formTwo{
+        color: $fontColor;
+        background-color: #5a7c9e;
+        border-color:  #5a7c9e;
+    }
+}
+.modal-header button:focus{
+    outline: none;
+}
 
 /*------------------Banner------------------- */
 #banner{
@@ -76,6 +97,11 @@ body{
 }
 .carousel-item__img{
 	object-fit: cover;
+}
+.carousel-indicators li{
+    width: 12px;
+    height: 10px;
+    border-radius: 100%;
 }
 /*------------------Envios y Pagos------------------- */
 #sectionInfo{
@@ -122,15 +148,6 @@ body{
 }
 
 /*------------------Footer------------------- */
-
-#seccion-contacts{
-    @include section-contact;
-    .contacts, .contacts__iframe{
-        display: flex;
-        flex: 1;
-        justify-content: space-around;
-   }
-}
 .footer{
     @include flexFooter;
 }
@@ -170,6 +187,7 @@ body{
     .footer__horarios--title{
         color: $fontColor;
         font-size: ($fontSize50/2)-3;
+        font-weight: 300;
     }
     .footer__horarios--list{
         list-style-type: none;
@@ -184,6 +202,7 @@ body{
 }
 /*---------Carousel------ */
 #carousel-marcas{
+    margin-top: 80px;
     .carousel__texto{
         font-size: ($fontSize50/2)-3;
     }
@@ -202,9 +221,6 @@ body{
 /*---------Productos------ */
 #section-products{
     grid-area: newProducts;
-    .section-products__imagenes{
-        object-fit: cover;
-    }
     .card__sombra{
         box-shadow: .7rem .7rem 1rem rgba(0,70,130,.20);
     }
@@ -224,9 +240,9 @@ body{
         border-color: $darkBlue;
     }
     .btn-product:hover{
-        color: $darkBlue;
-        background-color: $fontColor;
-        border-color: $darkBlue;
+        color: $fontColor;
+        background-color: #5a7c9e;
+        border-color: #5a7c9e;
     }
 }
 
@@ -239,11 +255,18 @@ body{
     .card__about{
         @include card-about;
     }
+    .card__about--images{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .card__about--body{
         display: $flex;
         flex-direction: $flexColumn;
-        justify-content: space-between;
         align-items: center;
+        text-align: center;
+        justify-content: center;
     }
     h1{
         @include h1-about;
@@ -260,8 +283,10 @@ body{
         font-weight: $fontW;
     }
     .section-info-about__title{
+        color: #638590;
         font-size: 2.5rem;
         font-weight: $fontW;
+        margin-top: 150px;
     }
 }
 
@@ -272,15 +297,18 @@ body{
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	} 
+    #header{
+        .nav-link{
+            font-size: 16px;
+        }
+        .header__titulo{
+            font-size: 21px;
+        }
+    }
     #banner{
         margin-top: 107px;
-    }
-	#banner .carousel-item{
-		height: auto;
-	}
-    #carousel-marcas{
-        .carousel__titulo{
-            margin-top: 105px;
+        .carousel-item{
+            height: auto;
         }
     }
 	#section-info-about{
@@ -303,8 +331,7 @@ body{
 	grid-template-columns: 1fr;
 	} 
     #banner{
-        max-width: none;
-        margin-top: 64px;
+        margin-top: 74px;
         .carousel-item{
             height: auto;
         }
@@ -318,9 +345,6 @@ body{
         h1{
             margin-top: 70px;
         }
-        .card__about{
-            
-        }
         .section-info-about__imagen{
             
             width: auto;
@@ -333,7 +357,44 @@ body{
         grid-template-rows: auto;
         grid-template-columns: 1fr;
         } 
-        #sectionInfo{
-            width: 70%;
+        #header{
+            opacity: 100%;
+        }
+        #section-products{
+            .card__sombra{
+                margin-top: 20px;
+            }
+            .card-deck{
+                justify-content: center;
+            }
+        }
+        .footer{
+            flex-direction: column;
+            .footer__informacion{
+                margin-bottom: 20px;
+                border-bottom: 1px solid #434a52;
+            }
+            .footer__box{
+                margin-bottom: 20px;
+                border-bottom: 1px solid #434a52;
+            }
+        }
+
+        #section-info-about{
+            .card__about{
+                justify-content: center;
+            }
+            .section-info-about__imagen{
+                width: 100%;
+            }
+            .iframeAbout{
+                width: 100%;
+            }
+            h1{
+                font-size: 40px;
+            }
+            .section-info-about__texto{
+                font-size: 20px;
+            }
         }
 }

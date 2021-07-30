@@ -20,7 +20,7 @@
 </head>
 <body class="bodyProductos">
 <!------------------------HEADER---------------------------------->
-	<div id="header" class="container-fluid px-0 bg-color">
+	<div id="header" class="container-fluid col-12 px-0 bg-color">
 		<div class="container">
 			<nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark bg-black">
 				<a class="header__titulo" href="index.html"><span class="header__letra">F</span>erreteria Industrial Oeste</a>
@@ -46,31 +46,83 @@
 						</li>						
 						<li class="nav-item">
 							<a class="nav-link" href="index.html#nuevo">Novedades</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#footer__contacts">Contactos</a>
-						</li>						
+						</li>					
 						<li class="nav-item">
 							<a class="nav-link" href="about.html">Sobre Nosotros</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" type="button" data-toggle="modal" data-target="#exampleModal">Contactanos</a>
+						</li>	
 					</ul>
 				</div>
-			</nav>
+			</nav>		
+		</div>
+	</div>
+	<!-------- Modal Contactanos --------->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Datos del usuario</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+			  <form>
+				<div class="form-group">
+				  <label for="recipient-name" class="col-form-label">Nombre</label>
+				  <input type="text" class="form-control" id="recipient-name" name="nombre">
+				</div>
+				<div class="form-group">
+					<label for="recipient-name" class="col-form-label">Apellido</label>
+					<input type="text" class="form-control" id="recipient-name" name="apellido">
+				</div>
+				<div class="form-group">
+					<label for="recipient-name" class="col-form-label">Correo electronico:</label>
+					<input type="email" class="form-control" id="recipient-name" placeholder="nombre@ejemplo.com" name="email">
+				</div>
+				<div class="form-group">
+				  <label for="message-text" class="col-form-label">Consulta/duda:</label>
+				  <textarea class="form-control form-consulta" id="message-text" placeholder="Hola!, Tengo una consulta sobre..."></textarea>
+				</div>
+			  </form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-primary btn-formTwo" data-toggle="modal" data-target="#exampleModalForm" data-dismiss="modal">Enviar</button>
+			</div>
+		  </div>
+		</div>
+	</div>	
+	<!-------- Modal Notification de Formulario --------->
+	<div class="modal fade" id="exampleModalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Hey!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				<div class="modal-body">
+					Gracias por enviarnos tu consulta, Trataremos de responderte lo antes posible!, Que tengas buen dia.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Close</button>
+				</div>
+			</div>
 		</div>
 	</div>
 <!------------------------CAROUSEL---------------------------------->
-	<div id="carousel-marcas" class="container">
-		<h2 class="carousel__titulo">
-			MARCAS
-		</h2>
+	<div id="carousel-marcas" class="container wow animate__animated animate__zoomInDown col-7 col-md-10 col-sm-11">
 		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
-			<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+				<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+				<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+				<li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+				<li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
@@ -85,21 +137,9 @@
 				</div>
 				<div class="carousel-item">
 					<img src="media/karcherFoto.jpg" class="d-block w-100 carousel__imagen" alt="logoKarcher">
-					<div class="carousel-caption d-none d-md-block">
-					<h5 class="carousel__texto">Makes a difference.</h5>
-					<p>Toda la tecnología y potencia de Kärcher para tu hogar.</p>
-					</div>
 				</div>
 				<div class="carousel-item">
 					<img src="media/stihlFoto.jpg" class="d-block w-100 carousel__imagen" alt="logoStihl">
-					<div class="carousel-caption d-none d-md-block">
-					<h5 class="carousel__texto">Stihl Motoimplementos S.A.</h5>
-					<p>Para cada trabajo siempre una buena opción.</p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="media/boschFoto.jpg" class="d-block w-100 carousel__imagen" alt="boschDogo">
-					<div class="carousel-caption d-none d-md-block"></div>
 				</div>
 				<div class="carousel-item">
 					<img src="media/stanleyFoto.jpg" class="d-block w-100 carousel__imagen" alt="stanleyDogo">
@@ -107,34 +147,30 @@
 					</div>
 				</div>
 			</div>
-			<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-			</a>
 		</div>
 	</div>
 <!------------------------ENVIOS Y PAGOS---------------------------------->
-	<div id="sectionInfo" class="card-group container mt-2">
+	<div id="sectionInfo" class="card-group container mt-2 wow animate__animated animate__zoomInUp col-7 col-md-10 col-sm-11">
 		<div class="card card-info">
-		<img src="media/paymentCard.svg" class="card-img-top imgSvg ml-5" alt="pagos">
-		<div class="card-body card-info__body">
-			<h5 class="card-title">Pagá con tarjeta o en efectivo.</h5>
-			<p class="card-text">Hasta 12 cuotas en tarjetas de credito. Tambien podes pagar con tarjeta de debito.</p>
-		</div>
-		</div>
-		<div class="card card-info">
-		<img src="media/qrImg.svg" class="card-img-top imgSvg ml-5" alt="qr">
-		<div class="card-body card-info__body">
-			<h5 class="card-title">Codigo QR.</h5>
-			<p class="card-text">Pagá con QR con tu cuenta de mercado pago.</p>
-		</div>
+			<img src="media/paymentCard.svg" class="card-img-top imgSvg m-auto ml-5" alt="pagos">
+			<div class="card-body card-info__body text-center">
+				<h5 class="card-title">Pagá con tarjeta o en efectivo.</h5>
+				<p class="card-text">Hasta 12 cuotas en tarjetas de credito. Tambien podes pagar con tarjeta de debito.</p>
+			</div>
 		</div>
 		<div class="card card-info">
-		<img src="media/envioImg.svg" class="card-img-top imgSvg ml-5" alt="envio">
-		<div class="card-body card-info__body">
-			<h5 class="card-title">Envios a todo el pais.</h5>
-			<p class="card-text">Compra desde cualquier parte del pais y nosotros te lo enviaremos a donde quieras.</p>
+			<img src="media/qrImg.svg" class="card-img-top imgSvg m-auto ml-5" alt="qr">
+			<div class="card-body card-info__body text-center">
+				<h5 class="card-title">Codigo QR.</h5>
+				<p class="card-text">Pagá con QR con tu cuenta de mercado pago.</p>
+			</div>
 		</div>
+		<div class="card card-info">
+			<img src="media/envioImg.svg" class="card-img-top imgSvg m-auto ml-5" alt="envio">
+			<div class="card-body card-info__body text-center">
+				<h5 class="card-title">Envios a todo el pais.</h5>
+				<p class="card-text">Compra desde cualquier parte del pais y nosotros te lo enviaremos a donde quieras.</p>
+			</div>
 		</div>
 	</div>
 <!------------------------PRODUCTOS---------------------------------->
@@ -143,39 +179,39 @@
 			<h3>Argentec</h3>
 		</div>
 		<div class="card-deck">
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInLeft">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/taladro.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body">
-						<h5 class="card-title">TALADRO AT400CI</h5>
+						<h5 class="card-title">TALADRO AT400CI<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Taladro 10mm velocidad variable-reversible.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInLeft">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/taladroDos.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body">
-						<h5 class="card-title">TALADRO AT400CIP</h5>
-						<p class="card-text">Taladro 10mm velocidad variable-reversible con percusion.</p>
+						<h5 class="card-title">TALADRO AT400CIP<span class="badge badge-pill badge-light">Nuevo!</span></h5>
+						<p class="card-text">Taladro 10mm velocidad variable-reversible.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInLeft">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/taladroTres.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body">
-						<h5 class="card-title">TALADRO AT500CI</h5>
+						<h5 class="card-title">TALADRO AT500CI<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Taladro 13mm. velocidad variable-reversible.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
@@ -184,7 +220,7 @@
 			<h3>Dogo</h3>
 		</div>
 		<div class="card-deck">
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInRight">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/soldadora.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body">
@@ -192,31 +228,31 @@
 						<p class="card-text">Soldadora 250 Amp con torcha, regulador, pinza porta masa.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInRight">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/soldadoraDos.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body">
 						<h5 class="card-title">SOLDADORA MIG 150</h5>
-						<p class="card-text">Soldadora 150 Amp con pinza porta electrodos, pinza porta masa.</p>
+						<p class="card-text">Soldadora 150 Amp con torcha, regulador, pinza porta masa.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInRight">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/soldadoraTres.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body">
 						<h5 class="card-title">SOLDADORA MIG 205</h5>
-						<p class="card-text">Soldadora 200 Amp con torcha y cable de maza.</p>
+						<p class="card-text">Soldadora 200 Amp con torcha, regulador, pinza porta masa.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
@@ -225,7 +261,7 @@
 			<h3>Karcher</h3>
 		</div>
 		<div class="card-deck mb-2">
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInLeft">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/aspiradora.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body">
@@ -233,11 +269,11 @@
 						<p class="card-text">Aspiradora 15 Lts 1000w.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInLeft">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/aspiradoraDos.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body">
@@ -245,11 +281,11 @@
 						<p class="card-text">Aspiradora 17 Lts 1000w.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInLeft">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/aspiradoraTres.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body">
@@ -257,7 +293,7 @@
 						<p class="card-text">Aspiradora 2.8 Lts 1100w.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
@@ -266,40 +302,59 @@
 			<h3>Stanley</h3>
 		</div>
 		<div class="card-deck mb-2">
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInRight">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/stanley.jpg" class="card-img-top section-products__imagenes" alt="stanleyAspiradora">
 					<div class="card-body">
-						<h5 class="card-title">ASPIRADORA 23 Litros</h5>
+						<h5 class="card-title">ASPIRADORA 23 Litros<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Aspiradora 1300w 230 V / 50 HZ.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInRight">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/stanleyDos.jpg" class="card-img-top section-products__imagenes" alt="stanleyAspiradora">
 					<div class="card-body">
-						<h5 class="card-title">ASPIRADORA 38 Litros</h5>
+						<h5 class="card-title">ASPIRADORA 38 Litros<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Aspiradora 1950w 240 V / 50 HZ.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 wow animate__animated animate__bounceInRight">
+			<div class="col-4 col-sm-7 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/stanleyTres.jpg" class="card-img-top section-products__imagenes" alt="stanleyAspiradora">
 					<div class="card-body">
-						<h5 class="card-title">ASPIRADORA 60 Litros</h5>
+						<h5 class="card-title">ASPIRADORA 60 Litros<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Aspiradora 1950w 220 V / 50 HZ.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-------- Modal Productos --------->
+	<div class="modal fade" id="exampleModalProducts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Lo sentimos</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				<div class="modal-body">
+					Por el momento nos hemos quedado sin stock de dicho producto, Le pedimos disculpas.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>

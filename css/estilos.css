@@ -64,6 +64,8 @@ body {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: transparent;
+  -webkit-transition: ease-in-out 350ms;
+  transition: ease-in-out 350ms;
 }
 
 .dropdown-menu {
@@ -82,6 +84,8 @@ body {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: transparent;
+  -webkit-transition: ease-in-out 350ms;
+  transition: ease-in-out 350ms;
 }
 
 .bg-color {
@@ -91,6 +95,26 @@ body {
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
   margin-top: auto;
+}
+
+.modal-body .form-consulta {
+  resize: none;
+}
+
+.modal-footer .btn-form {
+  color: #f0f9ff;
+  background-color: #282d32;
+  border-color: #282d32;
+}
+
+.modal-footer .btn-formTwo {
+  color: #f0f9ff;
+  background-color: #5a7c9e;
+  border-color: #5a7c9e;
+}
+
+.modal-header button:focus {
+  outline: none;
 }
 
 /*------------------Banner------------------- */
@@ -105,6 +129,12 @@ body {
 .carousel-item__img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.carousel-indicators li {
+  width: 12px;
+  height: 10px;
+  border-radius: 100%;
 }
 
 /*------------------Envios y Pagos------------------- */
@@ -162,42 +192,6 @@ body {
 }
 
 /*------------------Footer------------------- */
-#seccion-contacts {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#282d32));
-  background: linear-gradient(to bottom, #ffffff, #282d32);
-  top: 0;
-  grid-area: seccionContacts;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-top: 10px solid #ffffff;
-  border-bottom: 10px solid #282d32;
-}
-
-#seccion-contacts .contacts, #seccion-contacts .contacts__iframe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 .footer {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
@@ -259,6 +253,7 @@ body {
 .footer__horarios .footer__horarios--title {
   color: #f0f9ff;
   font-size: 22px;
+  font-weight: 300;
 }
 
 .footer__horarios .footer__horarios--list {
@@ -279,6 +274,10 @@ body {
 }
 
 /*---------Carousel------ */
+#carousel-marcas {
+  margin-top: 80px;
+}
+
 #carousel-marcas .carousel__texto {
   font-size: 22px;
 }
@@ -301,11 +300,6 @@ body {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: newProducts;
-}
-
-#section-products .section-products__imagenes {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 #section-products .card__sombra {
@@ -332,9 +326,9 @@ body {
 }
 
 #section-products .btn-product:hover {
-  color: #282d32;
-  background-color: #f0f9ff;
-  border-color: #282d32;
+  color: #f0f9ff;
+  background-color: #5a7c9e;
+  border-color: #5a7c9e;
 }
 
 /*------------------Seccion ABOUT US------------------- */
@@ -359,13 +353,27 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
   border: none;
+  margin-top: 80px;
+}
+
+#section-info-about .card__about--images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #section-info-about .card__about--body {
@@ -376,12 +384,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #section-info-about h1 {
@@ -408,8 +417,10 @@ body {
 }
 
 #section-info-about .section-info-about__title {
+  color: #638590;
   font-size: 2.5rem;
   font-weight: 300;
+  margin-top: 150px;
 }
 
 /*------------------Mobile first------------------- */
@@ -421,14 +432,17 @@ body {
     -ms-grid-rows: auto;
         grid-template-rows: auto;
   }
+  #header .nav-link {
+    font-size: 16px;
+  }
+  #header .header__titulo {
+    font-size: 21px;
+  }
   #banner {
     margin-top: 107px;
   }
   #banner .carousel-item {
     height: auto;
-  }
-  #carousel-marcas .carousel__titulo {
-    margin-top: 105px;
   }
   #section-info-about h1 {
     margin-top: 110px;
@@ -456,8 +470,7 @@ body {
         grid-template-columns: 1fr;
   }
   #banner {
-    max-width: none;
-    margin-top: 64px;
+    margin-top: 74px;
   }
   #banner .carousel-item {
     height: auto;
@@ -481,8 +494,47 @@ body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  #sectionInfo {
-    width: 70%;
+  #header {
+    opacity: 100%;
+  }
+  #section-products .card__sombra {
+    margin-top: 20px;
+  }
+  #section-products .card-deck {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer__informacion {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #434a52;
+  }
+  .footer .footer__box {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #434a52;
+  }
+  #section-info-about .card__about {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #section-info-about .section-info-about__imagen {
+    width: 100%;
+  }
+  #section-info-about .iframeAbout {
+    width: 100%;
+  }
+  #section-info-about h1 {
+    font-size: 40px;
+  }
+  #section-info-about .section-info-about__texto {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

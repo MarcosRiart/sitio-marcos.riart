@@ -25,9 +25,9 @@ $fontColor: #f0f9ff;
     display: $flex;
     flex-direction: $flexRow;
     flex: 1;
-    justify-content: space-evenly;
     align-items: stretch;
     border: none;
+    margin-top: 80px;
 }
 @mixin h1-about{
     text-align: center;
@@ -37,21 +37,10 @@ $fontColor: #f0f9ff;
     text-transform: uppercase;
     margin-top: 4%;
 }
-@mixin section-contact{
-    background: linear-gradient(to bottom,#ffffff , $darkBlue);
-	top: 0;
-	grid-area: seccionContacts;
-	display: flex;
-	flex-direction: column-reverse;
-	flex: 1;
-	align-items: center;
-	justify-content: space-between;
-	border-top: 10px solid #ffffff;
-	border-bottom: 10px solid $darkBlue;
-}
 @mixin nav-bar-animation{
     text-decoration: overline #5a7c9e 2px;
     color: #5a7c9e;
     transition: 0.5s;
     background-color: transparent;
+    transition: ease-in-out 350ms;
 }

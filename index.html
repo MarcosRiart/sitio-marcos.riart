@@ -20,7 +20,7 @@
 </head>
 <body class="bodyHome">
 <!------------------------HEADER---------------------------------->
-	<div id="header" class="container-fluid px-0 bg-color">
+	<div id="header" class="container-fluid col-12 px-0 bg-color">
 		<div class="container">
 			<nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark bg-black">
 				<a class="header__titulo" href="index.html"><span class="header__letra">F</span>erreteria Industrial Oeste</a>
@@ -46,21 +46,77 @@
 						</li>						
 						<li class="nav-item">
 							<a class="nav-link" href="#nuevo">Novedades</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#footer__contacts">Contactos</a>
-						</li>						
+						</li>					
 						<li class="nav-item">
 							<a class="nav-link" href="about.html">Sobre Nosotros</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" type="button" data-toggle="modal" data-target="#exampleModal">Contactanos</a>
+						</li>	
 					</ul>
 				</div>
-			</nav>
+			</nav>		
+		</div>
+	</div>
+	<!-------- Modal Contactanos --------->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Datos del usuario</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+			  <form>
+				<div class="form-group">
+				  <label for="recipient-name" class="col-form-label">Nombre</label>
+				  <input type="text" class="form-control" id="recipient-name" name="nombre">
+				</div>
+				<div class="form-group">
+					<label for="recipient-name" class="col-form-label">Apellido</label>
+					<input type="text" class="form-control" id="recipient-name" name="apellido">
+				</div>
+				<div class="form-group">
+					<label for="recipient-name" class="col-form-label">Correo electronico:</label>
+					<input type="email" class="form-control" id="recipient-name" placeholder="nombre@ejemplo.com" name="email">
+				</div>
+				<div class="form-group">
+				  <label for="message-text" class="col-form-label">Consulta/duda:</label>
+				  <textarea class="form-control form-consulta" id="message-text" placeholder="Hola!, Tengo una consulta sobre..."></textarea>
+				</div>
+			  </form>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Cerrar</button>
+			  <button type="button" class="btn btn-primary btn-formTwo" data-toggle="modal" data-target="#exampleModalForm" data-dismiss="modal">Enviar</button>
+			</div>
+		  </div>
+		</div>
+	</div>	
+	<!-------- Modal Notification de Formulario --------->
+	<div class="modal fade" id="exampleModalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Hey!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				<div class="modal-body">
+					Gracias por enviarnos tu consulta, Trataremos de responderte lo antes posible!, Que tengas buen dia.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Close</button>
+				</div>
+			</div>
 		</div>
 	</div>
 <!------------------------BANNER---------------------------------->
-	<div id="banner" class="container">
-		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+	<div id="banner" class="container col-8 col-md-10 col-sm-11">
+		<div id="carouselExampleCaptions" class="carousel slide wow animate__animated animate__zoomInDown" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
 				<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -82,84 +138,99 @@
 					<div class="carousel-caption d-none d-md-block"> 
 					</div>
 				</div>
-					<a class="carousel-control-prev" href="#carouselExampleCaptions" role="none" data-slide="prev">
-					</a>
-				<a class="carousel-control-next" href="#carouselExampleCaptions" role="none" data-slide="next">
-				</a>
 			</div>
 		</div>
 	</div>
 <!------------------------ENVIOS Y PAGOS---------------------------------->
-	<div id="sectionInfo" class="card-group container mt-2">
+	<div id="sectionInfo" class="card-group container mt-2 wow animate__animated animate__zoomInDown col-8 col-md-10 col-sm-11">
 		<div class="card card-info">
-		<img src="media/paymentCard.svg" class="card-img-top imgSvg ml-5" alt="pagos">
-		<div class="card-body card-info__body">
-			<h5 class="card-title">Pagá con tarjeta o en efectivo.</h5>
-			<p class="card-text">Hasta 12 cuotas en tarjetas de credito. Tambien podes pagar con tarjeta de debito.</p>
-		</div>
-		</div>
-		<div class="card card-info">
-		<img src="media/qrImg.svg" class="card-img-top imgSvg ml-5" alt="qr">
-		<div class="card-body card-info__body">
-			<h5 class="card-title">Codigo QR.</h5>
-			<p class="card-text">Pagá con QR con tu cuenta de mercado pago.</p>
-		</div>
+			<img src="media/paymentCard.svg" class="card-img-top imgSvg m-auto ml-5" alt="pagos">
+			<div class="card-body card-info__body text-center">
+				<h5 class="card-title">Pagá con tarjeta o en efectivo.</h5>
+				<p class="card-text">Hasta 12 cuotas en tarjetas de credito. Tambien podes pagar con tarjeta de debito.</p>
+			</div>
 		</div>
 		<div class="card card-info">
-		<img src="media/envioImg.svg" class="card-img-top imgSvg ml-5" alt="envio">
-		<div class="card-body card-info__body">
-			<h5 class="card-title">Envios a todo el pais.</h5>
-			<p class="card-text">Compra desde cualquier parte del pais y nosotros te lo enviaremos a donde quieras.</p>
+			<img src="media/qrImg.svg" class="card-img-top imgSvg m-auto ml-5" alt="qr">
+			<div class="card-body card-info__body text-center">
+				<h5 class="card-title">Codigo QR.</h5>
+				<p class="card-text">Pagá con QR con tu cuenta de mercado pago.</p>
+			</div>
 		</div>
+		<div class="card card-info">
+			<img src="media/envioImg.svg" class="card-img-top imgSvg m-auto ml-5" alt="envio">
+			<div class="card-body card-info__body text-center">
+				<h5 class="card-title">Envios a todo el pais.</h5>
+				<p class="card-text">Compra desde cualquier parte del pais y nosotros te lo enviaremos a donde quieras.</p>
+			</div>
 		</div>
 	</div>
 <!------------------------NOVEDADES---------------------------------->
-	<div id="nuevo" class="container mb-2 wow animate__animated animate__backInLeft">
+	<div id="nuevo" class="container mb-2 wow animate__animated animate__zoomInDown">
 		<h1 class="nuevo__titulo">Nuevo!</h1>
 		<h4 class="nuevo__subtitulo">Lo mejor en herramientas.</h4>
 	</div>
 	<div id="section-products" class="container mb-3">
 		<div class="card-deck"> 
-			<div class="col-8 col-md-4 wow animate__animated animate__backInLeft">
+			<div class="col-4 col-sm-7 wow animate__animated animate__zoomInUp">
 				<div class="card card__sombra">
 					<img src="media/taladro.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body">
-						<h5 class="card-title">TALADRO AT400CI</h5>
+						<h5 class="card-title">TALADRO AT400CI<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Taladro 10mm velocidad variable-reversible.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 wow animate__animated animate__backInLeft">
+			<div class="col-4 col-sm-7 wow animate__animated animate__zoomInUp">
 				<div class="card card__sombra">
 					<img src="media/taladroDos.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body">
-						<h5 class="card-title">TALADRO AT400CIP</h5>
-						<p class="card-text">Taladro 10mm velocidad variable-reversible con percusion.</p>
+						<h5 class="card-title">TALADRO AT400CIP<span class="badge badge-pill badge-light">Nuevo!</span></h5>
+						<p class="card-text">Taladro 10mm velocidad variable-reversible.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 wow animate__animated animate__backInLeft">
+			<div class="col-4 col-sm-7 wow animate__animated animate__zoomInUp">
 				<div class="card card__sombra">
 					<img src="media/taladroTres.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body">
-						<h5 class="card-title">TALADRO AT500CI</h5>
+						<h5 class="card-title">TALADRO AT500CI<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Taladro 13mm. velocidad variable-reversible.</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary rounded-pill btn-product">VER PRODUCTO</a>
+						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-------- Modal Productos --------->
+	<div class="modal fade" id="exampleModalProducts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Lo sentimos</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				<div class="modal-body">
+					Por el momento nos hemos quedado sin stock de dicho producto, Le pedimos disculpas.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 <!------------------------FOOTER---------------------------------->
-	<div class="footer bgFooter mt-4">
+	<div class="footer bgFooter mt-4 col-12">
 		<div id="footer__contacts" class="footer__informacion">
 			<h3 class="footer__informacion--contactos">Contactos:</h3>
 			<ul class="footer__informacion--list">
