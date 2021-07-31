@@ -41,6 +41,10 @@ body{
         color: #71231f;
         font-weight: bold;
     }
+    .header__logo--img{
+        width: 35px;
+        margin-right: 10px;
+    }
 }
 #nav-bar{
     .nav-link{
@@ -121,6 +125,7 @@ body{
     .imgSvg{
         width: 20%;
         object-fit: cover;
+        margin: 15px auto 0;
     }
 }
 
@@ -131,7 +136,7 @@ body{
         color: #343a40;
         text-align: center;
         margin-top: 30px;
-        font-size: ($fontSize50/2)+2;
+        font-size: ($fontSize50/2)+5;
         font-weight: $fontW;
     }
 
@@ -139,7 +144,7 @@ body{
         color: #717070;
         text-align: center;
         margin-top: 10px;
-        font-size: ($fontSize50/5)+6;
+        font-size: ($fontSize50/5)+8;
         font-weight: $fontW;
     }
 }
@@ -164,10 +169,11 @@ body{
         color: $fontColor;
         list-style-type: none;
     }
-    span{
+    a, span{
         font-family: $fontF;
         font-weight: $fontW;
         font-size: 14px;
+        color: $fontColor;
     }
 }
 .footer__box--redes{
@@ -257,9 +263,9 @@ body{
     }
     .card__about--images{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
     }
     .card__about--body{
         display: $flex;
@@ -359,13 +365,19 @@ body{
         } 
         #header{
             opacity: 100%;
+            .header__titulo{
+                display: none;
+            }
         }
         #section-products{
             .card__sombra{
                 margin-top: 20px;
             }
             .card-deck{
+                display: flex;
+                flex-direction: column;
                 justify-content: center;
+                align-items: center;
             }
         }
         .footer{

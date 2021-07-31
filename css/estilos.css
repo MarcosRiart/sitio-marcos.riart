@@ -53,6 +53,11 @@ body {
   font-weight: bold;
 }
 
+#header .header__logo--img {
+  width: 35px;
+  margin-right: 10px;
+}
+
 #nav-bar .nav-link {
   color: #f0f9ff;
 }
@@ -162,6 +167,7 @@ body {
   width: 20%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 15px auto 0;
 }
 
 /*------------------Novedades------------------- */
@@ -175,7 +181,7 @@ body {
   color: #343a40;
   text-align: center;
   margin-top: 30px;
-  font-size: 27px;
+  font-size: 30px;
   font-weight: 300;
 }
 
@@ -183,7 +189,7 @@ body {
   color: #717070;
   text-align: center;
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -230,10 +236,11 @@ body {
   list-style-type: none;
 }
 
-.footer__informacion span {
+.footer__informacion a, .footer__informacion span {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 14px;
+  color: #f0f9ff;
 }
 
 .footer__box--redes a {
@@ -346,10 +353,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -364,16 +371,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #section-info-about .card__about--body {
@@ -399,7 +406,6 @@ body {
   font-weight: 300;
   color: #5e7f8a;
   text-transform: uppercase;
-  margin-top: 4%;
 }
 
 #section-info-about .section-info-about__imagen {
@@ -497,13 +503,26 @@ body {
   #header {
     opacity: 100%;
   }
+  #header .header__titulo {
+    display: none;
+  }
   #section-products .card__sombra {
     margin-top: 20px;
   }
   #section-products .card-deck {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer {
     -webkit-box-orient: vertical;

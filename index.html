@@ -21,13 +21,18 @@
 <body class="bodyHome">
 <!------------------------HEADER---------------------------------->
 	<div id="header" class="container-fluid col-12 px-0 bg-color">
-		<div class="container">
+		<div class="container-fluid">
 			<nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark bg-black">
-				<a class="header__titulo" href="index.html"><span class="header__letra">F</span>erreteria Industrial Oeste</a>
+				<div class="d-flex justify-content-center align-items-center">
+					<a class="header__logo" href="index.html">
+						<img src="media/logo-ferre.jpg" class="header__logo--img" alt="logo-navbar">
+					</a>
+					<a class="header__titulo" href="index.html"><span class="header__letra">F</span>erreteria Industrial Oeste</a>
+				</div>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
@@ -115,7 +120,7 @@
 		</div>
 	</div>
 <!------------------------BANNER---------------------------------->
-	<div id="banner" class="container col-8 col-md-10 col-sm-11">
+	<div id="banner" class="container col-12 col-md-8">
 		<div id="carouselExampleCaptions" class="carousel slide wow animate__animated animate__zoomInDown" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -142,23 +147,23 @@
 		</div>
 	</div>
 <!------------------------ENVIOS Y PAGOS---------------------------------->
-	<div id="sectionInfo" class="card-group container mt-2 wow animate__animated animate__zoomInDown col-8 col-md-10 col-sm-11">
+	<div id="sectionInfo" class="card-group container mt-2 wow animate__animated animate__zoomInDown col-12 col-md-8">
 		<div class="card card-info">
-			<img src="media/paymentCard.svg" class="card-img-top imgSvg m-auto ml-5" alt="pagos">
+			<img src="media/paymentCard.svg" class="card-img-top imgSvg" alt="pagos">
 			<div class="card-body card-info__body text-center">
 				<h5 class="card-title">Pagá con tarjeta o en efectivo.</h5>
 				<p class="card-text">Hasta 12 cuotas en tarjetas de credito. Tambien podes pagar con tarjeta de debito.</p>
 			</div>
 		</div>
 		<div class="card card-info">
-			<img src="media/qrImg.svg" class="card-img-top imgSvg m-auto ml-5" alt="qr">
+			<img src="media/qrImg.svg" class="card-img-top imgSvg" alt="qr">
 			<div class="card-body card-info__body text-center">
 				<h5 class="card-title">Codigo QR.</h5>
 				<p class="card-text">Pagá con QR con tu cuenta de mercado pago.</p>
 			</div>
 		</div>
 		<div class="card card-info">
-			<img src="media/envioImg.svg" class="card-img-top imgSvg m-auto ml-5" alt="envio">
+			<img src="media/envioImg.svg" class="card-img-top imgSvg" alt="envio">
 			<div class="card-body card-info__body text-center">
 				<h5 class="card-title">Envios a todo el pais.</h5>
 				<p class="card-text">Compra desde cualquier parte del pais y nosotros te lo enviaremos a donde quieras.</p>
@@ -172,38 +177,38 @@
 	</div>
 	<div id="section-products" class="container mb-3">
 		<div class="card-deck"> 
-			<div class="col-4 col-sm-7 wow animate__animated animate__zoomInUp">
+			<div class="col-10 col-md-4 mt-3 mb-3 wow animate__animated animate__zoomInUp">
 				<div class="card card__sombra">
 					<img src="media/taladro.jpg" class="card-img-top section-products__imagenes" alt="taladro">
-					<div class="card-body">
+					<div class="card-body text-center">
 						<h5 class="card-title">TALADRO AT400CI<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Taladro 10mm velocidad variable-reversible.</p>
 					</div>
-					<div class="card-footer">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-4 col-sm-7 wow animate__animated animate__zoomInUp">
+			<div class="col-10 col-md-4 mt-3 mb-3 wow animate__animated animate__zoomInUp">
 				<div class="card card__sombra">
 					<img src="media/taladroDos.jpg" class="card-img-top section-products__imagenes" alt="taladro">
-					<div class="card-body">
+					<div class="card-body text-center">
 						<h5 class="card-title">TALADRO AT400CIP<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Taladro 10mm velocidad variable-reversible.</p>
 					</div>
-					<div class="card-footer">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-4 col-sm-7 wow animate__animated animate__zoomInUp">
+			<div class="col-10 col-md-4 mt-3 mb-3 wow animate__animated animate__zoomInUp">
 				<div class="card card__sombra">
 					<img src="media/taladroTres.jpg" class="card-img-top section-products__imagenes" alt="taladro">
-					<div class="card-body">
+					<div class="card-body text-center">
 						<h5 class="card-title">TALADRO AT500CI<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Taladro 13mm. velocidad variable-reversible.</p>
 					</div>
-					<div class="card-footer">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
@@ -235,10 +240,14 @@
 			<h3 class="footer__informacion--contactos">Contactos:</h3>
 			<ul class="footer__informacion--list">
 				<li>
-					<i class="far fa-envelope"><span class="ml-2">ferreteriaoeste@hotmail.com</span></i>
+					<i class="far fa-envelope">
+						<a class="ml-2" href="mailto:ferreteriaoeste@hotmail.com">ferreteriaoeste@hotmail.com</a>
+					</i>
 				</li>
 				<li>
-					<i class="fas fa-phone-alt"><span class="ml-2">02202 42-7565</span></i>
+					<i class="fas fa-phone-alt">
+						<span class="ml-2">02202 42-7565</span>
+					</i>
 				</li>
 			</ul>
 		</div>

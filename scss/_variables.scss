@@ -23,7 +23,7 @@ $fontColor: #f0f9ff;
 }
 @mixin card-about{
     display: $flex;
-    flex-direction: $flexRow;
+    flex-direction: column-reverse;
     flex: 1;
     align-items: stretch;
     border: none;
@@ -35,7 +35,6 @@ $fontColor: #f0f9ff;
     font-weight: $fontW;
     color: #5e7f8a;
     text-transform: uppercase;
-    margin-top: 4%;
 }
 @mixin nav-bar-animation{
     text-decoration: overline #5a7c9e 2px;

@@ -21,13 +21,18 @@
 <body class="bodyAbout">
 <!------------------------HEADER---------------------------------->
 	<div id="header" class="container-fluid col-12 px-0 bg-color">
-		<div class="container">
+		<div class="container-fluid">
 			<nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark bg-black">
-				<a class="header__titulo" href="index.html"><span class="header__letra">F</span>erreteria Industrial Oeste</a>
+				<div class="d-flex justify-content-center align-items-center">
+					<a class="header__logo" href="index.html">
+						<img src="media/logo-ferre.jpg" class="header__logo--img" alt="logo-navbar">
+					</a>
+					<a class="header__titulo" href="index.html"><span class="header__letra">F</span>erreteria Industrial Oeste</a>
+				</div>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
@@ -117,9 +122,9 @@
 <!------------------------SECCION INFO---------------------------------->
 	<div id="section-info-about" class="container-fluid">
 		<div class="card card__about col-md-12 col-sm-12">
-			<div class="card__about--images container">
+			<div class="card__about--images container-fluid">
 				<img src="media/ferre.jpg" class="card-img-top section-info-about__imagen wow animate__animated animate__zoomInLeft mb-3" alt="info">
-				<iframe class="iframeAbout wow animate__animated animate__zoomInLeft" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5510.924303615509!2d-58.62467969954411!3d-34.78542737993081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc6728dc3f32ddd4!2sFerreteria%20Industrial%20Oeste!5e0!3m2!1ses-419!2sar!4v1625777359674!5m2!1ses-419!2sar" width="620" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				<iframe class="iframeAbout wow animate__animated animate__zoomInLeft" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5510.924303615509!2d-58.62467969954411!3d-34.78542737993081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc6728dc3f32ddd4!2sFerreteria%20Industrial%20Oeste!5e0!3m2!1ses-419!2sar!4v1625777359674!5m2!1ses-419!2sar" width="620" height="420" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			</div>
 			<div class="card-body card__about--body container wow animate__animated animate__zoomInRight">
 				<h1 class="wow animate__animated animate__zoomInDown mb-5">Ferreteria Industrial Oeste</h1>
@@ -138,10 +143,14 @@
 			<h3 class="footer__informacion--contactos">Contactos:</h3>
 			<ul class="footer__informacion--list">
 				<li>
-					<i class="far fa-envelope"><span class="ml-2">ferreteriaoeste@hotmail.com</span></i>
+					<i class="far fa-envelope">
+						<a class="ml-2" href="mailto:ferreteriaoeste@hotmail.com">ferreteriaoeste@hotmail.com</a>
+					</i>
 				</li>
 				<li>
-					<i class="fas fa-phone-alt"><span class="ml-2">02202 42-7565</span></i>
+					<i class="fas fa-phone-alt">
+						<span class="ml-2">02202 42-7565</span>
+					</i>
 				</li>
 			</ul>
 		</div>
