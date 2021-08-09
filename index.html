@@ -68,34 +68,34 @@
 		<div class="modal-dialog modal-dialog-centered">
 		  <div class="modal-content">
 			<div class="modal-header">
-			  <h5 class="modal-title" id="exampleModalLabel">Datos del usuario</h5>
+			  <h5 class="modal-title modal-h3" id="exampleModalLabel">Datos del usuario</h5>
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
+				<i class="far fa-window-close" aria-hidden="true"></i>
 			  </button>
 			</div>
 			<div class="modal-body">
 			  <form>
 				<div class="form-group">
-				  <label for="recipient-name" class="col-form-label">Nombre</label>
+				  <label for="recipient-name" class="col-form-label info-modal">Nombre</label>
 				  <input type="text" class="form-control" id="recipient-name" name="nombre">
 				</div>
 				<div class="form-group">
-					<label for="recipient-name" class="col-form-label">Apellido</label>
+					<label for="recipient-name" class="col-form-label info-modal">Apellido</label>
 					<input type="text" class="form-control" id="recipient-name" name="apellido">
 				</div>
 				<div class="form-group">
-					<label for="recipient-name" class="col-form-label">Correo electronico:</label>
+					<label for="recipient-name" class="col-form-label info-modal">Correo electronico:</label>
 					<input type="email" class="form-control" id="recipient-name" placeholder="nombre@ejemplo.com" name="email">
 				</div>
 				<div class="form-group">
-				  <label for="message-text" class="col-form-label">Consulta/duda:</label>
-				  <textarea class="form-control form-consulta" id="message-text" placeholder="Hola!, Tengo una consulta sobre..."></textarea>
+				  <label for="message-text" class="col-form-label info-modal">Consulta/duda:</label>
+				  <textarea class="form-control form-consulta" id="message-text" placeholder="Hola!"></textarea>
 				</div>
 			  </form>
 			</div>
 			<div class="modal-footer">
-			  <button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Cerrar</button>
-			  <button type="button" class="btn btn-primary btn-formTwo" data-toggle="modal" data-target="#exampleModalForm" data-dismiss="modal">Enviar</button>
+				<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-primary btn-formTwo" data-toggle="modal" data-target="#exampleModalForm" data-dismiss="modal">Enviar</button>
 			</div>
 		  </div>
 		</div>
@@ -104,14 +104,17 @@
 	<div class="modal fade" id="exampleModalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Hey!</h5>
+				<div class="modal-header modal-thanks">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
+						<i class="far fa-window-close" aria-hidden="true"></i>
 					</button>
 				  </div>
 				<div class="modal-body">
-					Gracias por enviarnos tu consulta, Trataremos de responderte lo antes posible!, Que tengas buen dia.
+					<div class="modal-send container d-flex flex-column align-items-center">
+						<h5 class="modal-title mb-3" id="exampleModalLabel">¡Gracias por contactarnos!</h5>
+						<i class="far fa-grin-wink fa-7x p-5"></i>
+						<h5 class="modal-title text-center p-2">Trataremos de responderle lo antes posible.</h5>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Close</button>
@@ -120,7 +123,7 @@
 		</div>
 	</div>
 <!------------------------BANNER---------------------------------->
-	<div id="banner" class="container col-12 col-md-8">
+	<div id="banner" class="container col-10 col-lg-11 col-xl-8">
 		<div id="carouselExampleCaptions" class="carousel slide wow animate__animated animate__zoomInDown" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -147,22 +150,22 @@
 		</div>
 	</div>
 <!------------------------ENVIOS Y PAGOS---------------------------------->
-	<div id="sectionInfo" class="card-group container mt-2 wow animate__animated animate__zoomInDown col-12 col-md-8">
-		<div class="card card-info">
+	<div id="sectionInfo" class="card-group container mt-3 wow animate__animated animate__zoomInDown">
+		<div class="card card-info col-4 col-lg-8">
 			<img src="media/paymentCard.svg" class="card-img-top imgSvg" alt="pagos">
 			<div class="card-body card-info__body text-center">
 				<h5 class="card-title">Pagá con tarjeta o en efectivo.</h5>
 				<p class="card-text">Hasta 12 cuotas en tarjetas de credito. Tambien podes pagar con tarjeta de debito.</p>
 			</div>
 		</div>
-		<div class="card card-info">
+		<div class="card card-info col-4 col-lg-8">
 			<img src="media/qrImg.svg" class="card-img-top imgSvg" alt="qr">
 			<div class="card-body card-info__body text-center">
 				<h5 class="card-title">Codigo QR.</h5>
 				<p class="card-text">Pagá con QR con tu cuenta de mercado pago.</p>
 			</div>
 		</div>
-		<div class="card card-info">
+		<div class="card card-info col-4 col-lg-8">
 			<img src="media/envioImg.svg" class="card-img-top imgSvg" alt="envio">
 			<div class="card-body card-info__body text-center">
 				<h5 class="card-title">Envios a todo el pais.</h5>
@@ -177,7 +180,7 @@
 	</div>
 	<div id="section-products" class="container mb-3">
 		<div class="card-deck"> 
-			<div class="col-10 col-md-4 mt-3 mb-3 wow animate__animated animate__zoomInUp">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__zoomInUp">
 				<div class="card card__sombra">
 					<img src="media/taladro.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body text-center">
@@ -189,7 +192,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-10 col-md-4 mt-3 mb-3 wow animate__animated animate__zoomInUp">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__zoomInUp">
 				<div class="card card__sombra">
 					<img src="media/taladroDos.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body text-center">
@@ -201,7 +204,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-10 col-md-4 mt-3 mb-3 wow animate__animated animate__zoomInUp">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__zoomInUp">
 				<div class="card card__sombra">
 					<img src="media/taladroTres.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body text-center">
@@ -219,14 +222,17 @@
 	<div class="modal fade" id="exampleModalProducts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Lo sentimos</h5>
+				<div class="modal-header modal-thanks">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
+						<i class="far fa-window-close" aria-hidden="true"></i>
 					</button>
 				  </div>
 				<div class="modal-body">
-					Por el momento nos hemos quedado sin stock de dicho producto, Le pedimos disculpas.
+					<div class="modal-send container d-flex flex-column align-items-center">
+						<h5 class="modal-title mb-3" id="exampleModalLabel">Lo sentimos</h5>
+						<i class="far fa-frown fa-7x p-5"></i>
+						<h5 class="modal-title text-center p-2">Nos hemos quedado sin stock de este producto.</h5>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Close</button>
@@ -235,8 +241,8 @@
 		</div>
 	</div>
 <!------------------------FOOTER---------------------------------->
-	<div class="footer bgFooter mt-4 col-12">
-		<div id="footer__contacts" class="footer__informacion">
+	<div class="footer col-12 bgFooter mt-4">
+		<div class="footer__informacion">
 			<h3 class="footer__informacion--contactos">Contactos:</h3>
 			<ul class="footer__informacion--list">
 				<li>
@@ -246,7 +252,7 @@
 				</li>
 				<li>
 					<i class="fas fa-phone-alt">
-						<span class="ml-2">02202 42-7565</span>
+						<a class="ml-2" href="tel:02202427565">02202 42-7565</a>
 					</i>
 				</li>
 			</ul>
@@ -267,7 +273,7 @@
 					Lunes a viernes: 8:30–12:30, 14:00–17:30.
 				</li>
 				<li>
-					Sabados: 8:30–12:30.
+					Sabados: 8:30–13:00.
 				</li>
 				<li>
 					Domingos: Cerrado.

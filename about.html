@@ -68,28 +68,28 @@
 		<div class="modal-dialog modal-dialog-centered">
 		  <div class="modal-content">
 			<div class="modal-header">
-			  <h5 class="modal-title" id="exampleModalLabel">Datos del usuario</h5>
+			  <h5 class="modal-title modal-h3" id="exampleModalLabel">Datos del usuario</h5>
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
+					<i class="far fa-window-close" aria-hidden="true"></i>
 			  </button>
 			</div>
 			<div class="modal-body">
 			  <form>
 				<div class="form-group">
-				  <label for="recipient-name" class="col-form-label">Nombre</label>
+				  <label for="recipient-name" class="col-form-label info-modal">Nombre</label>
 				  <input type="text" class="form-control" id="recipient-name" name="nombre">
 				</div>
 				<div class="form-group">
-					<label for="recipient-name" class="col-form-label">Apellido</label>
+					<label for="recipient-name" class="col-form-label info-modal">Apellido</label>
 					<input type="text" class="form-control" id="recipient-name" name="apellido">
 				</div>
 				<div class="form-group">
-					<label for="recipient-name" class="col-form-label">Correo electronico:</label>
+					<label for="recipient-name" class="col-form-label info-modal">Correo electronico:</label>
 					<input type="email" class="form-control" id="recipient-name" placeholder="nombre@ejemplo.com" name="email">
 				</div>
 				<div class="form-group">
-				  <label for="message-text" class="col-form-label">Consulta/duda:</label>
-				  <textarea class="form-control form-consulta" id="message-text" placeholder="Hola!, Tengo una consulta sobre..."></textarea>
+				  <label for="message-text" class="col-form-label info-modal">Consulta/duda:</label>
+				  <textarea class="form-control form-consulta" id="message-text" placeholder="Hola!"></textarea>
 				</div>
 			  </form>
 			</div>
@@ -104,14 +104,17 @@
 	<div class="modal fade" id="exampleModalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Hey!</h5>
+				<div class="modal-header modal-thanks">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
+						<i class="far fa-window-close" aria-hidden="true"></i>
 					</button>
 				  </div>
 				<div class="modal-body">
-					Gracias por enviarnos tu consulta, Trataremos de responderte lo antes posible!, Que tengas buen dia.
+					<div class="modal-send container d-flex flex-column align-items-center">
+						<h5 class="modal-title mb-3" id="exampleModalLabel">¡Gracias por contactarnos!</h5>
+						<i class="far fa-grin-wink fa-7x p-5"></i>
+						<h5 class="modal-title text-center p-2">Trataremos de responderle lo antes posible.</h5>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Close</button>
@@ -121,7 +124,7 @@
 	</div>
 <!------------------------SECCION INFO---------------------------------->
 	<div id="section-info-about" class="container-fluid">
-		<div class="card card__about col-md-12 col-sm-12">
+		<div class="card card__about">
 			<div class="card__about--images container-fluid">
 				<img src="media/ferre.jpg" class="card-img-top section-info-about__imagen wow animate__animated animate__zoomInLeft mb-3" alt="info">
 				<iframe class="iframeAbout wow animate__animated animate__zoomInLeft" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5510.924303615509!2d-58.62467969954411!3d-34.78542737993081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc6728dc3f32ddd4!2sFerreteria%20Industrial%20Oeste!5e0!3m2!1ses-419!2sar!4v1625777359674!5m2!1ses-419!2sar" width="620" height="420" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -139,7 +142,7 @@
 	</div>
 <!------------------------FOOTER---------------------------------->
 	<div class="footer col-12 bgFooter mt-4">
-		<div id="footer__contacts" class="footer__informacion">
+		<div class="footer__informacion">
 			<h3 class="footer__informacion--contactos">Contactos:</h3>
 			<ul class="footer__informacion--list">
 				<li>
@@ -149,7 +152,7 @@
 				</li>
 				<li>
 					<i class="fas fa-phone-alt">
-						<span class="ml-2">02202 42-7565</span>
+						<a class="ml-2" href="tel:02202427565">02202 42-7565</a>
 					</i>
 				</li>
 			</ul>
@@ -170,7 +173,7 @@
 					Lunes a viernes: 8:30–12:30, 14:00–17:30.
 				</li>
 				<li>
-					Sabados: 8:30–12:30.
+					Sabados: 8:30–13:00.
 				</li>
 				<li>
 					Domingos: Cerrado.

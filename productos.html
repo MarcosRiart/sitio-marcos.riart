@@ -68,28 +68,28 @@
 		<div class="modal-dialog modal-dialog-centered">
 		  <div class="modal-content">
 			<div class="modal-header">
-			  <h5 class="modal-title" id="exampleModalLabel">Datos del usuario</h5>
+			  <h5 class="modal-title modal-h3" id="exampleModalLabel">Datos del usuario</h5>
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
+					<i class="far fa-window-close" aria-hidden="true"></i>
 			  </button>
 			</div>
 			<div class="modal-body">
 			  <form>
 				<div class="form-group">
-				  <label for="recipient-name" class="col-form-label">Nombre</label>
+				  <label for="recipient-name" class="col-form-label info-modal">Nombre</label>
 				  <input type="text" class="form-control" id="recipient-name" name="nombre">
 				</div>
 				<div class="form-group">
-					<label for="recipient-name" class="col-form-label">Apellido</label>
+					<label for="recipient-name" class="col-form-label info-modal">Apellido</label>
 					<input type="text" class="form-control" id="recipient-name" name="apellido">
 				</div>
 				<div class="form-group">
-					<label for="recipient-name" class="col-form-label">Correo electronico:</label>
+					<label for="recipient-name" class="col-form-label info-modal">Correo electronico:</label>
 					<input type="email" class="form-control" id="recipient-name" placeholder="nombre@ejemplo.com" name="email">
 				</div>
 				<div class="form-group">
-				  <label for="message-text" class="col-form-label">Consulta/duda:</label>
-				  <textarea class="form-control form-consulta" id="message-text" placeholder="Hola!, Tengo una consulta sobre..."></textarea>
+				  <label for="message-text" class="col-form-label info-modal">Consulta/duda:</label>
+				  <textarea class="form-control form-consulta" id="message-text" placeholder="Hola!"></textarea>
 				</div>
 			  </form>
 			</div>
@@ -104,14 +104,17 @@
 	<div class="modal fade" id="exampleModalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Hey!</h5>
+				<div class="modal-header modal-thanks">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
+						<i class="far fa-window-close" aria-hidden="true"></i>
 					</button>
 				  </div>
 				<div class="modal-body">
-					Gracias por enviarnos tu consulta, Trataremos de responderte lo antes posible!, Que tengas buen dia.
+					<div class="modal-send container d-flex flex-column align-items-center">
+						<h5 class="modal-title mb-3" id="exampleModalLabel">¡Gracias por contactarnos!</h5>
+						<i class="far fa-grin-wink fa-7x p-5"></i>
+						<h5 class="modal-title text-center p-2">Trataremos de responderle lo antes posible.</h5>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Close</button>
@@ -120,7 +123,7 @@
 		</div>
 	</div>
 <!------------------------CAROUSEL---------------------------------->
-	<div id="carousel-marcas" class="container wow animate__animated animate__zoomInDown col-8">
+	<div id="carousel-marcas" class="container wow animate__animated animate__zoomInDown col-10 col-lg-11 col-xl-8">
 		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -155,24 +158,24 @@
 		</div>
 	</div>
 <!------------------------ENVIOS Y PAGOS---------------------------------->
-	<div id="sectionInfo" class="card-group container mt-2 wow animate__animated animate__zoomInUp col-8">
-		<div class="card card-info">
+	<div id="sectionInfo" class="card-group container mt-3 wow animate__animated animate__zoomInDown">
+		<div class="card card-info col-4 col-lg-8">
 			<img src="media/paymentCard.svg" class="card-img-top imgSvg" alt="pagos">
 			<div class="card-body card-info__body text-center">
 				<h5 class="card-title">Pagá con tarjeta o en efectivo.</h5>
 				<p class="card-text">Hasta 12 cuotas en tarjetas de credito. Tambien podes pagar con tarjeta de debito.</p>
 			</div>
 		</div>
-		<div class="card card-info">
+		<div class="card card-info col-4 col-lg-8">
 			<img src="media/qrImg.svg" class="card-img-top imgSvg" alt="qr">
 			<div class="card-body card-info__body text-center">
 				<h5 class="card-title">Codigo QR.</h5>
 				<p class="card-text">Pagá con QR con tu cuenta de mercado pago.</p>
 			</div>
 		</div>
-		<div class="card card-info">
+		<div class="card card-info col-4 col-lg-8">
 			<img src="media/envioImg.svg" class="card-img-top imgSvg" alt="envio">
-			<div class="card-body card-info__body text-center">
+			<div id="argentecProduct" class="card-body card-info__body text-center">
 				<h5 class="card-title">Envios a todo el pais.</h5>
 				<p class="card-text">Compra desde cualquier parte del pais y nosotros te lo enviaremos a donde quieras.</p>
 			</div>
@@ -180,124 +183,124 @@
 	</div>
 <!------------------------PRODUCTOS---------------------------------->
 	<div id="section-products" class="container">
-		<div id="argentecProduct" class="container mt-5 wow animate__animated animate__bounceInLeft">
+		<div class="container mt-5 wow animate__animated animate__bounceInLeft">
 			<h3>Argentec</h3>
 		</div>
 		<div class="card-deck">
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInLeft">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/taladro.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body text-center">
 						<h5 class="card-title">TALADRO AT400CI<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Taladro 10mm velocidad variable-reversible.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInLeft">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/taladroDos.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body text-center">
 						<h5 class="card-title">TALADRO AT400CIP<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Taladro 10mm velocidad variable-reversible.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInLeft">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/taladroTres.jpg" class="card-img-top section-products__imagenes" alt="taladro">
 					<div class="card-body text-center">
 						<h5 class="card-title">TALADRO AT500CI<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Taladro 13mm. velocidad variable-reversible.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div id="dogoProduct" class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="dogoProduct" class="container mt-5 wow animate__animated animate__bounceInRight">
+		<div class="container mt-5 wow animate__animated animate__bounceInRight">
 			<h3>Dogo</h3>
 		</div>
 		<div class="card-deck">
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInRight">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/soldadora.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body text-center">
 						<h5 class="card-title">SOLDADORA MIG 250</h5>
 						<p class="card-text">Soldadora 250 Amp con torcha, regulador, pinza porta masa.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInRight">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/soldadoraDos.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body text-center">
 						<h5 class="card-title">SOLDADORA MIG 150</h5>
 						<p class="card-text">Soldadora 150 Amp con torcha, regulador, pinza porta masa.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInRight">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/soldadoraTres.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body text-center">
 						<h5 class="card-title">SOLDADORA MIG 205</h5>
 						<p class="card-text">Soldadora 200 Amp con torcha, regulador, pinza porta masa.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div id="karcherProduct" class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="karcherProduct" class="container mt-5 wow animate__animated animate__bounceInLeft">
+		<div class="container mt-5 wow animate__animated animate__bounceInLeft">
 			<h3>Karcher</h3>
 		</div>
 		<div class="card-deck mb-2">
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInLeft">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/aspiradora.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body text-center">
 						<h5 class="card-title">ASPIRADORA WD 1</h5>
 						<p class="card-text">Aspiradora 15 Lts 1000w.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInLeft">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/aspiradoraDos.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body text-center">
 						<h5 class="card-title">ASPIRADORA WD 3</h5>
 						<p class="card-text">Aspiradora 17 Lts 1000w.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInLeft">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInLeft">
 				<div class="card card__sombra">
 					<img src="media/aspiradoraTres.jpg" class="card-img-top section-products__imagenes" alt="soldadora">
 					<div class="card-body text-center">
 						<h5 class="card-title">ASPIRADORA VC 2</h5>
 						<p class="card-text">Aspiradora 2.8 Lts 1100w.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
@@ -307,38 +310,38 @@
 			<h3>Stanley</h3>
 		</div>
 		<div class="card-deck mb-2">
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInRight">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/stanley.jpg" class="card-img-top section-products__imagenes" alt="stanleyAspiradora">
 					<div class="card-body text-center">
 						<h5 class="card-title">ASPIRADORA 23 Litros<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Aspiradora 1300w 230 V / 50 HZ.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInRight">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/stanleyDos.jpg" class="card-img-top section-products__imagenes" alt="stanleyAspiradora">
 					<div class="card-body text-center">
 						<h5 class="card-title">ASPIRADORA 38 Litros<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Aspiradora 1950w 240 V / 50 HZ.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-8 col-md-4 m-auto wow animate__animated animate__bounceInRight">
+			<div class="col-8 col-lg-4 mt-3 mb-3 wow animate__animated animate__bounceInRight">
 				<div class="card card__sombra">
 					<img src="media/stanleyTres.jpg" class="card-img-top section-products__imagenes" alt="stanleyAspiradora">
 					<div class="card-body text-center">
 						<h5 class="card-title">ASPIRADORA 60 Litros<span class="badge badge-pill badge-light">Nuevo!</span></h5>
 						<p class="card-text">Aspiradora 1950w 220 V / 50 HZ.</p>
 					</div>
-					<div class="card-footer text-center">
+					<div class="card-footer container-fluid text-center">
 						<a href="#" class="btn btn-primary rounded-pill btn-product text-center m-auto" type="button" data-toggle="modal" data-target="#exampleModalProducts">VER PRODUCTO</a>
 					</div>
 				</div>
@@ -349,14 +352,17 @@
 	<div class="modal fade" id="exampleModalProducts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Lo sentimos</h5>
+				<div class="modal-header modal-thanks">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
+						<i class="far fa-window-close" aria-hidden="true"></i>
 					</button>
 				  </div>
 				<div class="modal-body">
-					Por el momento nos hemos quedado sin stock de dicho producto, Le pedimos disculpas.
+					<div class="modal-send container d-flex flex-column align-items-center">
+						<h5 class="modal-title mb-3" id="exampleModalLabel">Lo sentimos</h5>
+						<i class="far fa-frown fa-7x p-5"></i>
+						<h5 class="modal-title text-center p-2">Nos hemos quedado sin stock de este producto.</h5>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-form" data-dismiss="modal">Close</button>
@@ -366,7 +372,7 @@
 	</div>
 <!------------------------FOOTER---------------------------------->
 	<div class="footer col-12 bgFooter mt-4">
-		<div id="footer__contacts" class="footer__informacion">
+		<div class="footer__informacion">
 			<h3 class="footer__informacion--contactos">Contactos:</h3>
 			<ul class="footer__informacion--list">
 				<li>
@@ -376,7 +382,7 @@
 				</li>
 				<li>
 					<i class="fas fa-phone-alt">
-						<span class="ml-2">02202 42-7565</span>
+						<a class="ml-2" href="tel:02202427565">02202 42-7565</a>
 					</i>
 				</li>
 			</ul>
@@ -397,7 +403,7 @@
 					Lunes a viernes: 8:30–12:30, 14:00–17:30.
 				</li>
 				<li>
-					Sabados: 8:30–12:30.
+					Sabados: 8:30–13:00.
 				</li>
 				<li>
 					Domingos: Cerrado.
