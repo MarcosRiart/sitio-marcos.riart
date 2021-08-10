@@ -444,6 +444,11 @@ body {
           flex-direction: column;
 }
 
+.bodyAbout .footer {
+  position: absolute;
+  bottom: 0;
+}
+
 #section-info-about .card__about {
   display: -webkit-box;
   display: -ms-flexbox;

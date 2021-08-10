@@ -310,6 +310,10 @@ body{
 .bodyAbout{
     display: $flex;
     flex-direction: $flexColumn;
+    .footer{
+        position: absolute;
+        bottom: 0;
+    }
 }
 #section-info-about{
     .card__about{
