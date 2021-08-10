@@ -194,6 +194,7 @@ body{
 /*------------------Footer------------------- */
 .footer{
     @include flexFooter;
+    padding-top: 50px;
 }
 .bgFooter{
     background-color: $darkBlue;
@@ -310,10 +311,6 @@ body{
 .bodyAbout{
     display: $flex;
     flex-direction: $flexColumn;
-    .footer{
-        position: absolute;
-        bottom: 0;
-    }
 }
 #section-info-about{
     .card__about{
