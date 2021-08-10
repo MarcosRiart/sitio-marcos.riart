@@ -25,7 +25,8 @@ $fontColor: #f0f9ff;
     display: $flex;
     flex-direction: column-reverse;
     flex: 1;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
     border: none;
     margin-top: 80px;
 }

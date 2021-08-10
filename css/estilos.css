@@ -455,9 +455,12 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none;
   margin-top: 80px;
 }
@@ -543,24 +546,6 @@ body {
 }
 
 /*------------------Mobile first------------------- */
-@media all and (max-width: 1370px) {
-  #section-info-about .card__about {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  #section-info-about .card__about--images {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
 @media all and (max-width: 1024px) {
   .bodyHome {
         grid-template-areas: "header" "banner" "sectionInfo" "nuevo" "newProducts" "footer";
@@ -581,8 +566,64 @@ body {
   #banner .carousel-item {
     height: auto;
   }
-  .section-info-about__imagen {
-    width: auto;
+  #section-info-about .card__about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #section-info-about .card__about--images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #section-info-about .section-info-about__imagen, #section-info-about .iframeAbout {
+    width: 100%;
+  }
+  #sectionInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #sectionInfo .card-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  #section-products .card-deck {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -612,6 +653,23 @@ body {
   .section-info-about__imagen {
     width: auto;
   }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer__informacion {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #434a52;
+  }
+  .footer .footer__box {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #434a52;
+  }
 }
 
 @media all and (max-width: 576px) {
@@ -639,20 +697,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .footer .footer__informacion {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #434a52;
-  }
-  .footer .footer__box {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #434a52;
   }
   #section-info-about .card__about {
     -webkit-box-pack: center;

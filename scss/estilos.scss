@@ -361,15 +361,7 @@ body{
 }
 /*------------------Mobile first------------------- */
 @media all and (max-width: 1370px){
-    #section-info-about{
-        .card__about{
-            flex-direction: column-reverse;
-        }
-        .card__about--images{
-            display: flex;
-            flex-direction: column;
-        }
-    }
+
 }
 @media all and (max-width: 1024px){
 	.bodyHome{
@@ -391,9 +383,36 @@ body{
             height: auto;
         }
     }
-        .section-info-about__imagen{
-            width: auto;
+    #section-info-about{
+        .card__about{
+            flex-direction: column-reverse;
         }
+        .card__about--images{
+            display: flex;
+            flex-direction: column;
+        }
+        .section-info-about__imagen, .iframeAbout{
+            width: 100%;
+        }
+    }
+    #sectionInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .card-info{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    #section-products .card-deck{
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media only screen and (min-width: 1026px) and (max-width: 1160px){
     #banner, #carousel-marcas{
@@ -417,9 +436,21 @@ body{
             margin-top: 70px;
         }
     }
-        .section-info-about__imagen{
-            width: auto;
+    .section-info-about__imagen{
+        width: auto;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        .footer__informacion{
+            margin-bottom: 20px;
+            border-bottom: 1px solid #434a52;
         }
+        .footer__box{
+            margin-bottom: 20px;
+            border-bottom: 1px solid #434a52;
+        }
+    }
 }
 @media all and (max-width: 576px){
     .bodyHome{
@@ -440,17 +471,6 @@ body{
         .card-deck{
             display: flex;
             flex-direction: column;
-        }
-    }
-    .footer{
-        flex-direction: column;
-        .footer__informacion{
-            margin-bottom: 20px;
-            border-bottom: 1px solid #434a52;
-        }
-        .footer__box{
-            margin-bottom: 20px;
-            border-bottom: 1px solid #434a52;
         }
     }
     #section-info-about{
